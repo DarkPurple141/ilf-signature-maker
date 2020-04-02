@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Vaud Bold';
+  src: url('fonts/VaudDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Vaud';
+  src: url('fonts/VaudDisplay-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vaud Medium';
+  src: url('fonts/VaudDisplay-Medium.woff') format('woff');
+}
+
+:root {
+  --orange: #F36F21;
+  --blue: #00B9F2;
+  --subtle: #555;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.4;
+  margin: 0 30px;
+  font-family: Vaud, Arial, Helvetica, sans-serif;
+}
+
+main, #raw {
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+h1, h2, h3, h4, h5, b {
+  font-family: 'Vaud Bold';
+}
+
+p, li, li a, label {
+  color: #555;
+}
+
+.header {
+  width: max-content;
+  padding: 10px 20px;
+  background-color: var(--orange);
+  color: white;
+}
+
+.info {
+  color: var(--subtle);
+}
+
+.checks, .field {
+  display: flex;
+}
+
+.field {
+  margin: 20px 0;
+  flex-direction: column;
+}
+
+.checks {
+  align-items: baseline;
+}
+
+.checks label {
+  margin: 0 5px;
+}
+
+#controls label {
+  font-family: 'Vaud Bold';
+}
+
+input {
+  margin: 0;
+  padding: 10px;
+  line-height: inherit;
+  font: inherit;
+  border: 1px solid #eee;
+}
+
+p {
+  font-family: 'Vaud Medium';
+}
+
+#controls {
+  padding: 20px 0;
+}
+
+#controls, #preview, #embed {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+#embed {
+  display: none;
+}
+
+.buttons {
+  flex-direction: row;
+}
+
+button {
+  font: inherit;
+  font-family: 'Vaud Bold';
+  color: white;
+  background-color: var(--blue);
+  border: none;
+  margin-right: 10px;
+  padding: 10px 18px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #controls {
+    padding: 0;
+    border: none;
+  }
+
+  #raw, main {
+    padding: 0 40px;
+  }
+
+  main {
+    border-right: 1px solid #eee;
+  }
+}
+
+
+

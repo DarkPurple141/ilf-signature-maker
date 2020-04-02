@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Signature Builder</title>
+  <meta name="description" content="Mini App built for the Indigenous Literacy Foundation" />
+  <link rel="stylesheet" href="style.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1 class="header">Signature Generator</h1>
+    <div id="controls">
+      <p class="info">Fill in the fields below to generate your custom signature. 
+        The preview will be generated as you type. When you're finished, click the copy to clipboard button and paste their source into your signature.</p>
+      <form>
+        <div class="field">
+          <label for="name">Name</label>
+          <input name="name" type="text" value="First Name"/>
+        </div>
+        <div class="field">
+          <label for="job">Job Title</label>
+          <input name="job" type="text" value="Job Description"/>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input name="phone" type="tel" value="02 9280 0644"/>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input name="email" type="email" value="peter@example.com"/>
+        </div>
+        <div class="checks">
+          <input type="checkbox" id="awards" name="awards-include" checked="true" />
+          <label for="awards-include">Include awards image</label>
+          <input for="banner-include" type="checkbox" id="banner" name="banner-include" checked="true" />
+          <label>Include banner image</label>
+        </div>
+        <div class="buttons field">
+          <button type="button" id="copy">Copy HTML to Clipboard</button>
+          <button type="button" id="view">View Source</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <div id="embed">
+    <style>
+        #content {
+          line-height: 1.4;
+          font-family: Vaud, Arial, Helvetica, sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, b {
+          font-family: 'Vaud Bold', Arial, Helvetica, sans-serif;
+          font-weight: bold;
+        }
+  
+        p, li, li a, label {
+          color: #555;
+        }
+  
+        p {
+          margin: 0;
+          line-height: 1.3;
+        }
+  
+        #content, img {
+          min-width: 400px;
+          max-width: 400px;
+        }
+  
+        .signature-section {
+          margin: 20px 0;
+        }
+
+        .acknowledge {
+          color: #F36F21;
+        }
+  
+        @media screen and (max-width: 600px) {
+          #content, img {
+            min-width: 350px;
+            max-width: 350px;
+          }
+        }
+      </style>
+      <div id="content"></div>
+  </div>
+  <div id="raw">
+    <style>
+      h1, h2, h3, h4, h5, b {
+        font-family: 'Vaud Bold';
+      }
+
+      p, li, li a, label {
+        color: #555;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.3;
+      }
+
+      #preview, img {
+        min-width: 400px;
+        max-width: 400px;
+      }
+
+      .signature-section {
+        margin: 20px 0;
+      }
+
+      .acknowledge {
+          color: #F36F21;
+        }
+
+      @media screen and (max-width: 600px) {
+        #preview, img {
+          min-width: 350px;
+          max-width: 350px;
+        }
+      }
+    </style>
+    <h1 class="header alt-header">Preview</h1>
+    <div id="preview"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
