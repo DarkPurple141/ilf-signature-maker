@@ -121,10 +121,10 @@ button:hover {
 
 @media screen and (min-width: 800px) {
   body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-gap: 40px;
+    align-items: start;
   }
 
   #controls {
@@ -133,7 +133,12 @@ button:hover {
   }
 
   #raw, main {
-    padding: 0 40px;
+    max-width: none;
+    padding: 0 80px;
+  }
+
+  #raw {
+    margin-left: 0;
   }
 
   main {
