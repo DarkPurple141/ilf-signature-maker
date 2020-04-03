@@ -10,9 +10,9 @@
 </head>
 <body>
   <main>
-    <h1 class="header">Signature Generator</h1>
+    <h1 class="header bold-font">Signature Generator</h1>
     <div id="controls">
-      <p class="info">Fill in the fields below to generate your custom signature. 
+      <p class="info normal-font">Fill in the fields below to generate your custom signature. 
         The preview will be generated as you type. When you're finished, click the copy to clipboard button and paste their source into your signature.</p>
       <form>
         <div class="field">
@@ -45,20 +45,24 @@
         </div>
         <div class="buttons field">
           <button type="button" id="copy">Copy HTML to Clipboard</button>
-          <button type="button" id="view">View Source</button>
         </div>
       </form>
     </div>
   </main>
+  <div id="raw">
+    <h1 class="header alt-header bold-font">Preview</h1>
+    <em><--- COPY FROM HERE ----></em>
   <div id="embed">
     <style>
+        * {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
         #content {
           line-height: 1.4;
-          font-family: Vaud, Arial, Helvetica, sans-serif;
         }
 
         h1, h2, h3, h4, h5, b {
-          font-family: 'Vaud Bold', Arial, Helvetica, sans-serif;
           font-weight: bold;
         }
   
@@ -93,43 +97,7 @@
       </style>
       <div id="content"></div>
   </div>
-  <div id="raw">
-    <style>
-      h1, h2, h3, h4, h5, b {
-        font-family: 'Vaud Bold';
-      }
-
-      p, li, li a, label {
-        color: #555;
-      }
-
-      p {
-        margin: 0;
-        line-height: 1.3;
-      }
-
-      #preview, img {
-        min-width: 400px;
-        max-width: 400px;
-      }
-
-      .signature-section {
-        margin: 20px 0;
-      }
-
-      .acknowledge {
-          color: #F36F21;
-        }
-
-      @media screen and (max-width: 600px) {
-        #preview, img {
-          min-width: 350px;
-          max-width: 350px;
-        }
-      }
-    </style>
-    <h1 class="header alt-header">Preview</h1>
-    <div id="preview"></div>
+  <em><--- TO HERE ----></em>
   </div>
   <script src="main.js"></script>
 </body>

@@ -44,7 +44,6 @@ ${includePrograms ? `\
 
 function init() {
   const $embed = document.getElementById('embed');
-  const $preview = document.getElementById('preview');
   const $job = document.querySelector('input[name=job]');
   const $name = document.querySelector('input[name=name]');
   const $email = document.querySelector('input[name=email]');
@@ -64,24 +63,8 @@ function init() {
   });
 
   const $button = document.getElementById('copy');
-  const $view = document.getElementById('view');
 
   $button.addEventListener('click', copyToClip);
-  $view.addEventListener('click', viewSource);
-
-  function viewSource() {
-    const template = getTemplate();
-    toggled = !toggled;
-
-    if (toggled) {
-      const $pre = document.createElement('pre');
-      $pre.innerText = getEmbedHTML();
-      $preview.innerHTML = "";
-      $preview.appendChild($pre);
-    } else {
-      $preview.innerHTML = template;
-    }
-  }
 
   function getEmbedHTML() {
     return `<div>${$embed.innerHTML}</div>`;
@@ -118,7 +101,6 @@ function init() {
 
     toggled = false;
 
-    $preview.innerHTML = template;
     $content.innerHTML = template;
   }
 

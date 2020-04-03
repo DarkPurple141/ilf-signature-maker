@@ -27,7 +27,7 @@ html, body {
 body {
   line-height: 1.4;
   margin: 0 30px;
-  font-family: Vaud, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 main, #raw {
@@ -36,11 +36,19 @@ main, #raw {
 }
 
 h1, h2, h3, h4, h5, b {
-  font-family: 'Vaud Bold';
+  font-weight: bold;
 }
 
 p, li, li a, label {
   color: #555;
+}
+
+.bold-font {
+  font-family: 'Vaud Bold';
+}
+
+.normal-font {
+  font-family: 'Vaud Medium';
 }
 
 .header {
@@ -83,21 +91,12 @@ input {
   border: 1px solid #eee;
 }
 
-p {
-  font-family: 'Vaud Medium';
-}
-
 #controls {
   padding: 20px 0;
 }
 
 #controls, #preview, #embed {
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-
-#embed {
-  display: none;
 }
 
 .buttons {
