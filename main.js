@@ -26,10 +26,6 @@ ${additional && `
 `}
 ${includeAwards || includeBanner || includePrograms ? `\
 <div class="signature-section">
-${includeAwards ? `\
-  <a href="https://go.ilf.org.au/emailsignature">
-    <img alt="ILF Awards" src="https://go.ilf.org.au/emailawardsimage" />
-  </a>` : ''}
 ${includeBanner ? `\
   <a href="https://go.ilf.org.au/emailawards">
     <img alt="Promotional Banner Image" src="https://go.ilf.org.au/emailsignatureimage" />
@@ -37,6 +33,10 @@ ${includeBanner ? `\
 ${includePrograms ? `\
   <a href="https://go.ilf.org.au/programssignaturelink">
     <img alt="ILF Programs" src="https://go.ilf.org.au/programssignatureimage" />
+  </a>` : ''}
+${includeAwards ? `\
+  <a href="https://go.ilf.org.au/emailsignature">
+    <img alt="ILF Awards" src="https://go.ilf.org.au/emailawardsimage" />
   </a>` : ''}
 </div>`
 : ''}
